@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  background-color: #180910;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #180910;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  height: 50%;
+}
+
+#tutorials {
+  color: #fdfc01;
+  background-color: #180910;
+}
+#tutorials #yt-pic {
+  width: 200px;
+  margin: 3% auto;
+  display: block;
+}
+#tutorials h2 {
+  color: #add9ff;
+  border-bottom-color: #dd00a9;
+  width: 400px;
+  font-size: 3.4rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+#tutorials .tut-container {
+  width: 70%;
+  display: grid;
+  margin: 5rem auto;
+}
+#tutorials .tut-container .tut-category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
+  border: 1px solid #add9ff;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #08030e;
+}
+#tutorials .tut-container .tut-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+#tutorials .tut-container .tut-item h5 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+#tutorials .tut-container .tut-category:nth-of-type(1),
+#tutorials .tut-container .tut-category:nth-of-type(3) {
+  background-image: url("/assets/img/back1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10px;
+}
+#tutorials .tut-container .tut-category:nth-of-type(2),
+#tutorials .tut-container .tut-category:nth-of-type(4) {
+  background-image: url("/assets/img/back22.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10px;
+}
+#tutorials .tut-container .tut-category {
+  font-size: 2.3rem;
+  margin: 3rem auto;
+  color: #add9ff;
+  text-transform: uppercase;
+  padding: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #tutorials h2 {
+    font-size: 32px;
+  }
+
+  .enquire-button-tut {
+    width: 100%;
+  }
+
+  .tut-container {
+    width: 100% !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    padding: 0 !important;
+  }
+
+  .tut-category-container {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tut-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid;
+  }
+  .tut-item h5 {
+    text-align: center;
+    font-size: 12px !important;
+  }
+
+  .tut-category {
+    font-size: 24px !important;
+  }
+
+  .vid-cont {
+    width: 300px;
+  }
+}/*# sourceMappingURL=tutorials.css.map */

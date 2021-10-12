@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+$primary-color: purple;
+$secondary-color: #add9ff;
+$pink-color: #dd00a9;
+$yellow-color: #fdfc01;
+$dark-color: #180910;
+$light-color: rgb(238, 238, 238);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin jContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  background-color: $dark-color;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// TUTORIALS
+
+#header {
+  height: 50%;
+}
+
+#tutorials {
+  color: $yellow-color;
+  background-color: $dark-color;
+  #yt-pic {
+    width: 200px;
+    margin: 3% auto;
+    display: block;
+  }
+  h2 {
+    color: $secondary-color;
+    border-bottom-color: $pink-color;
+    width: 400px;
+    font-size: 3.4rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .tut-container {
+    width: 70%;
+    display: grid;
+    margin: 5rem auto;
+    .tut-category-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
+      border: 1px solid $secondary-color;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: rgb(8, 3, 14);
+    }
+
+    .tut-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      h5 {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    .tut-category:nth-of-type(1),
+    .tut-category:nth-of-type(3) {
+      background-image: url("/assets/img/back1.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      border-radius: 10px;
+    }
+    .tut-category:nth-of-type(2),
+    .tut-category:nth-of-type(4) {
+      background-image: url("/assets/img/back22.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      border-radius: 10px;
+    }
+    .tut-category {
+      font-size: 2.3rem;
+      margin: 3rem auto;
+      color: $secondary-color;
+      text-transform: uppercase;
+      padding: 3rem;
+      text-align: center;
+    }
+  }
+}
+
+//TUT Queries
+
+@media (max-width: 600px) {
+  #tutorials h2 {
+    font-size: 32px;
+  }
+  .enquire-button-tut {
+    width: 100%;
+  }
+  .tut-container {
+    width: 100% !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    padding: 0 !important;
+  }
+  .tut-category-container {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .tut-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid;
+    h5 {
+      text-align: center;
+      font-size: 12px !important;
+    }
+  }
+  .tut-category {
+    font-size: 24px !important;
+  }
+  .vid-cont {
+    width: 300px;
+  }
+}
